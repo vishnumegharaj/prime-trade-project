@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-black text-slate-100 font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.08), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(99, 102, 241, 0.06), transparent);
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900/70 backdrop-blur-sm border border-gray-800/60 rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-sky-700 hover:bg-sky-500 text-white font-medium px-5 py-2.5 rounded-xl
+           transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed
+           shadow-lg shadow-sky-500/20;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl
+           border border-slate-700 transition-all duration-200 active:scale-95;
+  }
+
+  .btn-danger {
+    @apply bg-red-500/10 hover:bg-red-500/20 text-red-400 font-medium px-4 py-2 rounded-xl
+           border border-red-500/20 transition-all duration-200 active:scale-95;
+  }
+
+  .input {
+    @apply w-full bg-gray-800/60 border border-gray-700/60 rounded-xl px-4 py-3
+           text-slate-100 placeholder-slate-500 text-sm
+           focus:outline-none focus:ring-2 focus:ring-sky-500/50 focus:border-sky-500/50
+           transition-all duration-200;
+  }
+
+  .label {
+    @apply block text-xs font-medium text-slate-400 mb-1.5 uppercase tracking-wider;
+  }
+
+  .badge-todo {
+    @apply bg-slate-700/60 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-lg;
+  }
+  .badge-in-progress {
+    @apply bg-amber-500/10 text-amber-400 text-xs font-medium px-2.5 py-1 rounded-lg border border-amber-500/20;
+  }
+  .badge-done {
+    @apply bg-emerald-500/10 text-emerald-400 text-xs font-medium px-2.5 py-1 rounded-lg border border-emerald-500/20;
+  }
+  .badge-low {
+    @apply bg-slate-700/40 text-slate-400 text-xs font-medium px-2.5 py-1 rounded-lg;
+  }
+  .badge-medium {
+    @apply bg-blue-500/10 text-blue-400 text-xs font-medium px-2.5 py-1 rounded-lg border border-blue-500/20;
+  }
+  .badge-high {
+    @apply bg-red-500/10 text-red-400 text-xs font-medium px-2.5 py-1 rounded-lg border border-red-500/20;
+  }
+}
