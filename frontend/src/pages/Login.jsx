@@ -110,11 +110,12 @@ const Login = () => {
         </div>
 
         {/* Demo credentials hint */}
-        <div className="mt-4 p-3.5 rounded-xl bg-slate-900/50 border border-slate-800/50 text-xs text-slate-500">
+
+        {/* <div className="mt-4 p-3.5 rounded-xl bg-slate-900/50 border border-slate-800/50 text-xs text-slate-500">
           <p className="font-medium text-slate-400 mb-1">Demo credentials</p>
           <p>Admin: <span className="font-mono text-slate-400">admin@taskflow.dev / Admin123</span></p>
           <p>User: <span className="font-mono text-slate-400">user@taskflow.dev / User1234</span></p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
